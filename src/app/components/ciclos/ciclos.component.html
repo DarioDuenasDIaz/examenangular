@@ -1,0 +1,41 @@
+<h1>Los ciclos tecnologicos son:</h1>
+
+
+<div class = "row">
+  <p>Asigantura:</p>
+ 
+  
+<ul *ngFor="let item of elementos" class="list-group">
+  <div class="col">
+  <li class="list-group-item">
+    <h1> {{ item.nombre }} </h1>
+    <ul class="list-group">
+      <li
+        class="list-group-item"
+        *ngFor="let conocimiento of item.conocimientos">
+        {{ conocimiento }}
+      </li>
+    </ul>
+  </li>
+</div>
+</ul>
+</div>
+
+
+<div class ="row">
+  <div class = "col"*ngFor="let item1 of cartasCiclos">
+    <div class="card" style="width: 18rem">
+      <img [src]="item1.imagen" class="card-img-top"/>
+      <div class="card-body">
+        <h5 class="card-title">{{ item1.curso }} {{ item1.nombre }}</h5>
+        <p class="card-text">
+          <!--<a (click)="traspaso()" class="btn btn-primary">Ver detalles</a>-->
+         
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
